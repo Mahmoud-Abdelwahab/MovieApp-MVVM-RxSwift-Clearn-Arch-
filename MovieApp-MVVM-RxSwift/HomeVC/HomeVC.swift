@@ -41,14 +41,23 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        changingStatusbarColor()
+        // binding inputs
+     
         bindingViews()
        
         homeViewModel.getAlbums()
         homeViewModel.getTracks()
+        
     }
     
-   
+    
+     override var preferredStatusBarStyle : UIStatusBarStyle {
+         return UIStatusBarStyle.lightContent
+         //return UIStatusBarStyle.default   // Make dark again
+     }
+    
+    
     func  bindingViews(){
         
         // binding loading to vc
@@ -85,5 +94,33 @@ class HomeVC: UIViewController {
             .disposed(by: disposeBag)
     }
     
+    
+    func changingStatusbarColor(){
+        
+            if #available(iOS 13.0, *) {
+                let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+                let height = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+                
+                let statusBarHeight: CGFloat = height
+                
+                let statusbarView = UIView()
+                statusbarView.backgroundColor = UIColor.yellow
+                view.addSubview(statusbarView)
+              
+                statusbarView.translatesAutoresizingMaskIntoConstraints = false
+                statusbarView.heightAnchor
+                    .constraint(equalToConstant: statusBarHeight).isActive = true
+                statusbarView.widthAnchor
+                    .constraint(equalTo: view.widthAnchor, multiplier: 1.0).isActive = true
+                statusbarView.topAnchor
+                    .constraint(equalTo: view.topAnchor).isActive = true
+                statusbarView.centerXAnchor
+                    .constraint(equalTo: view.centerXAnchor).isActive = true
+              
+            } else {
+                let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView
+                statusBar?.backgroundColor = UIColor.yellow
+            }
+    }
 }
 

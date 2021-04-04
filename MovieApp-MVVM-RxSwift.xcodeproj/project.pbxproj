@@ -30,6 +30,7 @@
 		A78C01092613EC4200B89EA7 /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78C01072613EC4200B89EA7 /* MessageView.xib */; };
 		A78C010A2613EC4200B89EA7 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C01082613EC4200B89EA7 /* MessageView.swift */; };
 		A78C012226148BA800B89EA7 /* LoadingViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C012126148BA800B89EA7 /* LoadingViewable.swift */; };
+		A78C016A2616859A00B89EA7 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C01692616859A00B89EA7 /* ViewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		A78C01072613EC4200B89EA7 /* MessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
 		A78C01082613EC4200B89EA7 /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		A78C012126148BA800B89EA7 /* LoadingViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewable.swift; sourceTree = "<group>"; };
+		A78C01692616859A00B89EA7 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		A78426CD26126F2B000A0CC0 /* MovieApp-MVVM-RxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				A78C01682616854D00B89EA7 /* Helpers */,
 				A78C01062613EC3500B89EA7 /* MessageView */,
 				A78C00FB2613EC1800B89EA7 /* LoadingView */,
 				A78C00DE2613E8DF00B89EA7 /* Extentions */,
@@ -209,6 +212,14 @@
 				A78C01072613EC4200B89EA7 /* MessageView.xib */,
 			);
 			path = MessageView;
+			sourceTree = "<group>";
+		};
+		A78C01682616854D00B89EA7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A78C01692616859A00B89EA7 /* ViewModelType.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +352,7 @@
 				A78426EA261271E9000A0CC0 /* TrackesTableView.swift in Sources */,
 				A784271C2613E2E7000A0CC0 /* Track.swift in Sources */,
 				A78426F126127320000A0CC0 /* AlbumCell.swift in Sources */,
+				A78C016A2616859A00B89EA7 /* ViewModelType.swift in Sources */,
 				A78C012226148BA800B89EA7 /* LoadingViewable.swift in Sources */,
 				A78426F726127C6D000A0CC0 /* TracksCell.swift in Sources */,
 				A78427182613E2D9000A0CC0 /* Album.swift in Sources */,
